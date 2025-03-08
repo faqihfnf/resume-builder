@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import Image from "next/image";
 import React, { use, useEffect, useRef, useState } from "react";
+import { formatDate } from "date-fns";
 
 interface ResumePreviewProps {
   resumeData: ResumeValues;
@@ -31,6 +32,8 @@ export default function ResumePreview({
         }}
       >
         <PersonalInfoHeader resumeData={resumeData} />
+        <SummarySection resumeData={resumeData} />
+        <WorkExperienceSection resumeData={resumeData} />
       </div>
     </div>
   );
@@ -80,5 +83,57 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
         </p>
       </div>
     </div>
+  );
+}
+
+function SummarySection({ resumeData }: ResumeSectionProps) {
+  const { summary } = resumeData;
+
+  if (!summary) return null;
+
+  return (
+    <>
+      <hr className="border-2" />
+      <div className="break-inside-avoid space-y-3">
+        <p className="text-lg font-semibold">About Me</p>
+        <div className="whitespace-pre-line text-sm">{summary}</div>
+      </div>
+    </>
+  );
+}
+
+function WorkExperienceSection({ resumeData }: ResumeSectionProps) {
+  const { workExperiences } = resumeData;
+
+  const workExperiencesNotEmpty = workExperiences?.filter(
+    (exp) => Object.values(exp).filter(Boolean).length > 0,
+  );
+
+  if (!workExperiencesNotEmpty?.length) return null;
+
+  return (
+    <>
+      <hr className="border-2" />
+      <div className="space-y-3">
+        <p className="text-lg font-semibold">Work Experience</p>
+        {workExperiencesNotEmpty.map((exp, index) => (
+          <div key={index} className="break-inside-avoid space-y-1">
+            <div className="flex items-center justify-between text-sm font-semibold">
+              <span>{exp.position}</span>
+              {exp.startDate && (
+                <span>
+                  {formatDate(exp.startDate, "MMM yyyy")} -{" "}
+                  {exp.endDate
+                    ? formatDate(exp.endDate, "MMM yyyy")
+                    : "Present"}
+                </span>
+              )}
+            </div>
+            <p className="font-serif text-sm">{exp.company}</p>
+            <div className="whitespace-pre-line text-xs">{exp.description}</div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
