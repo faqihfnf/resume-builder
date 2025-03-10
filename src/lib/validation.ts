@@ -20,7 +20,7 @@ export const personalInfoSchema = z.object({
     )
     .refine(
       (file) => !file || file.size <= 4 * 1024 * 1024,
-      "Photo must be less than 4MB",
+      "Photo must be less than 2MB",
     ),
   firstName: optionalString,
   lastName: optionalString,
