@@ -53,15 +53,12 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
       } catch (error) {
         setIsError(true);
         console.error(error);
-        const showErrorToast = () => {
-          toast.error("Could not save change", {
-            action: {
-              label: "Try Again",
-              onClick: () => save(),
-            },
-          });
-        };
-        showErrorToast();
+        toast.error("Could not save change", {
+          action: {
+            label: "Retry",
+            onClick: () => save(),
+          },
+        });
       } finally {
         setIsSaving(false);
       }

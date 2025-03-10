@@ -67,3 +67,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+[data-sonner-toast][data-type="error"] {
+  background-color: #f61e1e !important;
+  border: 1px solid #ffff !important;
+  color: #ffff !important;
+  button {
+    background-color: #ffff !important;
+    color: #f61e1e !important;
+  }
+}
+
+[data-sonner-toast][data-type="success"] {
+  background-color: #f0fdf4 !important;
+  border: 1px solid #86efac !important;
+  color: #16a34a !important;
+}
