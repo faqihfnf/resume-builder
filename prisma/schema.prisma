@@ -64,6 +64,7 @@ model Education {
   id String @id @default(cuid())
 
   degree String?
+  school String?
   startDate DateTime?
   endDate DateTime?
 
