@@ -11,7 +11,7 @@ import {
 import { ResumeServerData } from "@/lib/type";
 import { mapToResumeValues } from "@/lib/utils";
 import { formatDate } from "date-fns";
-import { MoreVertical, Printer, Trash2 } from "lucide-react";
+import { MoreHorizontalIcon, NotepadText, Printer, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState, useTransition } from "react";
 import { toast } from "sonner";
@@ -88,28 +88,32 @@ function MoreMenu({ resumeId, onPrintClick }: MoreMenuProps) {
           <Button
             variant="ghost"
             size="icon"
-            className="absolute right-0.5 top-0.5 opacity-0 transition-opacity group-hover:opacity-100"
+            className="absolute right-0.5 top-0.5 transition-opacity group-hover:opacity-100"
           >
-            <MoreVertical className="size-4" />
+            <MoreHorizontalIcon className="size-5" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuContent>
-            <DropdownMenuItem
-              className="flex items-center gap-2"
-              onClick={() => setShowDeleteConfirmation(true)}
-            >
-              <Trash2 className="size-4" />
-              Delete
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className="flex items-center gap-2"
-              onClick={onPrintClick}
-            >
-              <Printer className="size-4" />
-              Print
-            </DropdownMenuItem>
-          </DropdownMenuContent>
+          <DropdownMenuItem className="flex items-center gap-2" asChild>
+            <Link href={`/editor?resumeId=${resumeId}`}>
+              <NotepadText className="size-4" />
+              Detail
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            className="flex items-center gap-2"
+            onClick={() => setShowDeleteConfirmation(true)}
+          >
+            <Trash2 className="size-4" />
+            Delete
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            className="flex items-center gap-2"
+            onClick={onPrintClick}
+          >
+            <Printer className="size-4" />
+            Print
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       <DeleteConfirmationDialogue
@@ -138,6 +142,7 @@ function DeleteConfirmationDialogue({
     startTransition(async () => {
       try {
         await deleteResume(resumeId);
+        toast.success("Resume deleted successfully");
       } catch (error) {
         console.error(error);
         toast.error("Something went wrong", {
