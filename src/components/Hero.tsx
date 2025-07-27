@@ -19,21 +19,15 @@ function Hero() {
   });
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <section className="relative min-h-screen overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
-        {/* Main gradient orbs */}
-        {/* <div className="absolute left-1/4 top-0 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-blue-400 to-purple-600 opacity-30 mix-blend-multiply blur-3xl filter"></div>
-        <div className="animation-delay-2000 absolute right-1/4 top-1/3 h-80 w-80 animate-pulse rounded-full bg-gradient-to-r from-purple-400 to-pink-400 opacity-30 mix-blend-multiply blur-3xl filter"></div>
-        <div className="animation-delay-4000 absolute bottom-1/4 left-1/3 h-72 w-72 animate-pulse rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-25 mix-blend-multiply blur-3xl filter"></div> */}
-
         {/* Purple gradient */}
         <div className="absolute left-0 mt-48 h-1/3 w-full bg-gradient-to-tl from-violet-300 via-transparent to-pink-300 blur-[120px]"></div>
         {/* Blue gradient */}
         <div className="absolute right-0 mt-48 h-1/6 w-[60%] bg-gradient-to-tr from-cyan-200 via-sky-200 to-green-200 blur-[110px]"></div>
-
         {/* Grid pattern overlay */}
-        <div className="bg-grid-slate-100 absolute inset-0 opacity-20 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+        {/* <div className="bg-grid-slate-100 absolute inset-0 opacity-20 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div> */}
       </div>
 
       {/* Floating elements */}
@@ -63,7 +57,7 @@ function Hero() {
 
           {/* Main Headline */}
           <div className="space-y-2">
-            <h1 className="text-4xl font-black leading-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="text-5xl font-black leading-tight sm:text-6xl lg:text-7xl">
               <span className="block bg-gradient-to-r from-sky-600 via-purple-600 to-pink-700 bg-clip-text text-transparent">
                 Build Resume
               </span>
@@ -164,9 +158,6 @@ function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 }

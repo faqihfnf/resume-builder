@@ -6,7 +6,7 @@ import PlusPoint from "@/components/PlusPoint";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Header />
       <Hero />
       <PlusPoint />

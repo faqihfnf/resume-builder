@@ -11,17 +11,19 @@ function Faq() {
     <section id="faq" className="px-2 py-2 md:px-6 md:py-6">
       <div className="px-4 py-8 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-indigo-700 md:text-3xl lg:text-5xl">
-            Frequently Asked Questions
+          <h2 className="mb-6 text-3xl font-black sm:text-4xl lg:text-5xl">
+            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </span>
           </h2>
         </div>
       </div>
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full text-black">
         <AccordionItem
           value="item-1"
           className="mb-2 rounded-lg bg-slate-50/20 px-4"
         >
-          <AccordionTrigger className="text-left text-lg md:text-xl lg:text-2xl">
+          <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
             Apakah platform ini gratis?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
@@ -33,7 +35,7 @@ function Faq() {
           value="item-2"
           className="mb-2 rounded-lg bg-slate-50/20 px-4"
         >
-          <AccordionTrigger className="text-left text-lg md:text-xl lg:text-2xl">
+          <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
             Bagaimana cara kerja platform ini?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
@@ -47,7 +49,7 @@ function Faq() {
           value="item-3"
           className="mb-2 rounded-lg bg-slate-50/20 px-4"
         >
-          <AccordionTrigger className="text-left text-lg md:text-xl lg:text-2xl">
+          <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
             Apakah platform ini cocok untuk semua tingkat pengalaman?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
@@ -60,7 +62,7 @@ function Faq() {
           value="item-4"
           className="mb-2 rounded-lg bg-slate-50/20 px-4"
         >
-          <AccordionTrigger className="text-left text-lg md:text-xl lg:text-2xl">
+          <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
             Apakah bisa memilih posisi pekerjaan tertentu untuk latihan?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
@@ -73,7 +75,7 @@ function Faq() {
           value="item-5"
           className="mb-2 rounded-lg bg-slate-50/20 px-4"
         >
-          <AccordionTrigger className="text-left text-lg md:text-xl lg:text-2xl">
+          <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
             Apakah hasil dan umpan balik akan disimpan?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
@@ -86,7 +88,7 @@ function Faq() {
           value="item-6"
           className="mb-2 rounded-lg bg-slate-50/20 px-4"
         >
-          <AccordionTrigger className="text-left text-lg md:text-xl lg:text-2xl">
+          <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
             Apakah video wawancara akan disimpan?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
