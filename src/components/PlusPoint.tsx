@@ -25,9 +25,9 @@ function PlusPoint() {
     <section className="bg-white-50 text-black">
       <div className="">
         {/* Purple gradient */}
-        <div className="absolute left-0 mt-48 h-1/3 w-full bg-gradient-to-tl from-violet-300 via-transparent to-pink-300 blur-[120px]"></div>
+        <div className="absolute right-0 mt-48 h-1/3 w-full bg-gradient-to-tl from-violet-300 via-transparent to-pink-300 blur-[120px]"></div>
         {/* Blue gradient */}
-        <div className="absolute right-0 mt-48 h-1/6 w-[60%] bg-gradient-to-tr from-cyan-200 via-sky-200 to-green-200 blur-[110px]"></div>
+        <div className="absolute left-0 mt-48 h-1/6 w-[60%] bg-gradient-to-tr from-cyan-200 via-sky-200 to-green-200 blur-[110px]"></div>
       </div>
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-lg text-center">

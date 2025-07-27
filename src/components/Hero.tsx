@@ -1,65 +1,172 @@
 "use client";
-import { SquareArrowOutUpRight, Video } from "lucide-react";
+import {
+  SquareArrowOutUpRight,
+  Video,
+  Sparkles,
+  FileText,
+  Zap,
+} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { useTypewriter } from "react-simple-typewriter";
 
 function Hero() {
   const [typeEffect] = useTypewriter({
-    words: ["Pertanyaan", "Feedback", "Rating"],
+    words: ["Professional", "ATS-Friendly", "Eye-Catching", "Modern"],
     loop: true,
-    typeSpeed: 150,
-    deleteSpeed: 150,
+    typeSpeed: 120,
+    deleteSpeed: 80,
   });
 
   return (
-    <section className="bg-white-50 relative text-black">
-      {/* Main background gradients */}
-      <div className="">
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0">
+        {/* Main gradient orbs */}
+        {/* <div className="absolute left-1/4 top-0 h-96 w-96 animate-pulse rounded-full bg-gradient-to-r from-blue-400 to-purple-600 opacity-30 mix-blend-multiply blur-3xl filter"></div>
+        <div className="animation-delay-2000 absolute right-1/4 top-1/3 h-80 w-80 animate-pulse rounded-full bg-gradient-to-r from-purple-400 to-pink-400 opacity-30 mix-blend-multiply blur-3xl filter"></div>
+        <div className="animation-delay-4000 absolute bottom-1/4 left-1/3 h-72 w-72 animate-pulse rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-25 mix-blend-multiply blur-3xl filter"></div> */}
+
         {/* Purple gradient */}
-        <div className="absolute left-0 top-0 -z-50 h-1/3 w-full bg-gradient-to-br from-violet-500 via-transparent to-pink-400 blur-[110px]"></div>
+        <div className="absolute left-0 mt-48 h-1/3 w-full bg-gradient-to-tl from-violet-300 via-transparent to-pink-300 blur-[120px]"></div>
         {/* Blue gradient */}
-        <div className="absolute right-0 top-0 -z-50 h-1/6 w-[60%] bg-gradient-to-bl from-cyan-500 via-sky-300 to-green-500 blur-[110px]"></div>
+        <div className="absolute right-0 mt-48 h-1/6 w-[60%] bg-gradient-to-tr from-cyan-200 via-sky-200 to-green-200 blur-[110px]"></div>
+
+        {/* Grid pattern overlay */}
+        <div className="bg-grid-slate-100 absolute inset-0 opacity-20 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
       </div>
-      <div className="mx-auto mt-4 max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-        <div className="mx-auto text-center">
-          <h1 className="bg-gradient-to-l from-sky-600 via-purple-600 to-pink-600 bg-clip-text py-10 text-3xl font-extrabold text-transparent sm:text-7xl">
-            Interview Smart, Career Start
-            <span className="sm:block"> Persiapkan Dirimu Bersama AI </span>
-          </h1>
-          <h2 className="mb-8 text-4xl font-bold text-indigo-700 sm:text-5xl">
-            AI akan memberikan kamu{" "}
-            <span className="bg-gradient-to-bl from-sky-600 via-purple-600 to-pink-600 bg-clip-text py-10 font-extrabold text-transparent">
-              {typeEffect}
-            </span>
-            <span className="animate-blink text-purple-700">|</span>
-          </h2>
-          <p className="mx-auto mt-2 max-w-5xl font-medium text-slate-600 sm:text-lg/relaxed">
-            Platform wawancara interaktif dengan AI yang akan membantu kamu
-            mempersiapkan diri menghadapi wawancara kerja. <br /> Dengan fitur
-            yang lengkap seperti open kamera dan microphone membuat pengalaman
-            interviewmu semakin nyata.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+
+      {/* Floating elements */}
+      <div className="animation-delay-1000 absolute right-16 top-20 animate-bounce">
+        <div className="rounded-2xl border border-white/20 bg-white/80 p-4 shadow-xl backdrop-blur-sm">
+          <FileText className="text-blue-600" size={24} />
+        </div>
+      </div>
+      <div className="animation-delay-3000 absolute left-10 top-1/3 animate-bounce">
+        <div className="rounded-2xl border border-white/20 bg-white/80 p-4 shadow-xl backdrop-blur-sm">
+          <Sparkles className="text-purple-600" size={24} />
+        </div>
+      </div>
+      <div className="animation-delay-2000 absolute bottom-1/3 right-6 animate-bounce">
+        <div className="rounded-2xl border border-white/20 bg-white/80 p-4 shadow-xl backdrop-blur-sm">
+          <Zap className="text-emerald-600" size={24} />
+        </div>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 lg:py-12">
+        <div className="space-y-8 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-6 py-2 text-sm font-medium text-indigo-700 shadow-lg backdrop-blur-sm">
+            <Sparkles size={16} className="text-indigo-500" />
+            AI-Powered Resume Builder
+          </div>
+
+          {/* Main Headline */}
+          <div className="space-y-2">
+            <h1 className="text-4xl font-black leading-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+              <span className="block bg-gradient-to-r from-sky-600 via-purple-600 to-pink-700 bg-clip-text text-transparent">
+                Build Resume
+              </span>
+              <span className="mt-2 block bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-600 bg-clip-text text-transparent">
+                Effortlessly
+              </span>
+            </h1>
+          </div>
+
+          {/* Dynamic Subheading */}
+          <div className="mt-0">
+            <h2 className="text-2xl font-bold text-slate-700 sm:text-3xl lg:text-4xl">
+              Create{" "}
+              <span className="relative">
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text font-extrabold text-transparent">
+                  {typeEffect}
+                </span>
+                <span className="animate-pulse font-normal text-blue-600">
+                  |
+                </span>
+              </span>
+            </h2>
+            {/* <h3 className="text-xl font-semibold text-slate-600 sm:text-2xl">
+              Resumes with AI Intelligence
+            </h3> */}
+          </div>
+
+          {/* Description */}
+          <div className="mx-auto max-w-4xl">
+            <p className="text-lg font-medium leading-relaxed text-slate-600 sm:text-xl">
+              Transform your career with our intelligent resume builder.
+              <span className="font-semibold text-blue-600">
+                {" "}
+                AI-powered suggestions
+              </span>
+              ,
+              <span className="font-semibold text-purple-600">
+                {" "}
+                ATS optimization
+              </span>
+              , and
+              <span className="font-semibold text-emerald-600">
+                {" "}
+                professional templates
+              </span>{" "}
+              - all in one powerful platform.
+            </p>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              className="flex w-full cursor-pointer items-center justify-center gap-4 rounded-md bg-indigo-600 px-8 py-3 text-lg font-semibold text-white hover:bg-gradient-to-bl hover:from-emerald-300 hover:via-teal-300 hover:to-cyan-300 hover:text-purple-600 sm:w-auto"
               href="/resumes"
+              className="group relative inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-blue-500/25 active:scale-95 sm:w-auto"
             >
-              Get Started
-              <SquareArrowOutUpRight />
+              <span className="relative z-10">Get Started</span>
+              <SquareArrowOutUpRight
+                className="relative z-10 transition-transform duration-200 group-hover:-translate-y-1 group-hover:translate-x-1"
+                size={20}
+              />
+
+              {/* Animated background */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
             </Link>
+
             <Link
-              className="flex w-full items-center justify-center gap-4 rounded-md border border-purple-600 bg-purple-50 px-6 py-3 text-lg font-semibold text-purple-600 hover:border-purple-800 hover:bg-gradient-to-bl hover:from-purple-100 hover:via-violet-100 hover:to-indigo-100 focus:outline-none focus:ring active:bg-purple-200 sm:w-auto"
-              href="https://wa.me/628996423135" // Menggunakan wa.me untuk tautan langsung
-              target="_blank" // Membuka di tab baru
-              rel="noopener noreferrer" // Untuk keamanan
+              href="https://wa.me/628996423135"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex w-full items-center justify-center gap-3 rounded-2xl border-2 border-slate-200 bg-white/80 px-8 py-4 text-lg font-bold text-slate-700 shadow-xl backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-blue-300 hover:shadow-2xl active:scale-95 sm:w-auto"
             >
-              <Video size={30} />
-              Video Demo
+              <Video
+                size={24}
+                className="text-blue-600 transition-colors duration-200 group-hover:text-purple-600"
+              />
+              <span className="transition-colors duration-200 group-hover:text-blue-600">
+                Watch Demo
+              </span>
             </Link>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="pt-6">
+            <div className="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-slate-500">
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500"></div>
+                <span>ATS Optimized</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="animation-delay-1000 h-2 w-2 animate-pulse rounded-full bg-blue-500"></div>
+                <span>AI-Powered</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="animation-delay-2000 h-2 w-2 animate-pulse rounded-full bg-purple-500"></div>
+                <span>Professional Templates</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 }
