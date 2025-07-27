@@ -35,7 +35,11 @@ export default function ResumePreviewSection({
         />
       </div>
       <div className="flex w-full justify-center overflow-y-auto bg-secondary p-3">
-        <ResumePreview resumeData={resumeData} clasName="max-w-2xl shadow-md" />
+        <ResumePreview
+          contentRef={React.createRef()}
+          resumeData={resumeData}
+          clasName="max-w-2xl shadow-md"
+        />
       </div>
     </div>
   );

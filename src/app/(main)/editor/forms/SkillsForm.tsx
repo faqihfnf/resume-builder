@@ -67,7 +67,8 @@ export default function SkillsForm({
                   />
                 </FormControl>
                 <FormDescription>
-                  Separate each skill with a comma.
+                  Separate each skill with a comma ( eg : HTML, CSS, JavaScript
+                  )
                 </FormDescription>
               </FormItem>
             )}

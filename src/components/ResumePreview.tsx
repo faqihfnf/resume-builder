@@ -41,6 +41,7 @@ export default function ResumePreview({
         <SummarySection resumeData={resumeData} />
         <WorkExperienceSection resumeData={resumeData} />
         <EducationSection resumeData={resumeData} />
+        <CertificateSection resumeData={resumeData} />
         <SkillsSection resumeData={resumeData} />
       </div>
     </div>
@@ -198,6 +199,42 @@ function EducationSection({ resumeData }: ResumeSectionProps) {
               )}
             </div>
             <p className="font-serif text-sm">{edu.school}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+function CertificateSection({ resumeData }: ResumeSectionProps) {
+  const { certificate, colorHex } = resumeData;
+
+  const certificatesNotEmpty = certificate?.filter(
+    (crt) => Object.values(crt).filter(Boolean).length > 0,
+  );
+
+  if (!certificatesNotEmpty?.length) return null;
+
+  return (
+    <>
+      <hr className="border-2" style={{ borderColor: colorHex }} />
+      <div className="space-y-3">
+        <p className="text-lg font-semibold">Certificate</p>
+        {certificatesNotEmpty.map((crt, index) => (
+          <div key={index} className="break-inside-avoid space-y-1">
+            <div
+              className="flex items-center justify-between text-sm font-semibold"
+              style={{ color: colorHex }}
+            >
+              <span>{crt.title}</span>
+              {crt.startDate && (
+                <span>
+                  {crt.startDate &&
+                    `${formatDate(crt.startDate, "MMM yyyy")} ${crt.endDate ? `- ${formatDate(crt.endDate, "MMM yyyy")}` : ""}`}
+                </span>
+              )}
+            </div>
+            <p className="font-serif text-sm">{crt.institution}</p>
           </div>
         ))}
       </div>
