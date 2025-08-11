@@ -9,7 +9,7 @@ import path from "path";
 export async function saveResume(values: ResumeValues) {
   const { id } = values;
 
-  console.log("recieved values", values);
+  // console.log("recieved values", values);
 
   const { photo, workExperiences, educations, certificate, ...resumeValues } =
     resumeSchema.parse(values);

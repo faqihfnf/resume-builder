@@ -76,6 +76,7 @@ export default function PersonalInfoForm({
                       if (photoInputRef.current) {
                         photoInputRef.current.value = "";
                       }
+                      console.log(value);
                     }}
                   >
                     Remove

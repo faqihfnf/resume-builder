@@ -148,7 +148,7 @@ function PlusPoint() {
               <p className="leading-relaxed text-slate-600">
                 Get instant, intelligent recommendations as you build. Our AI
                 provides real-time feedback on content, formatting, and keyword
-                optimization to maximize your resume's impact.
+                optimization to maximize your resume impact.
               </p>
             </div>
           </div>

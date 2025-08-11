@@ -1,11 +1,9 @@
 import useDebounce from "@/hooks/useDebounce";
 import { ResumeValues } from "@/lib/validation";
-import { set } from "date-fns";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { saveResume } from "./action";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
 import { fileReplacer } from "@/lib/utils";
 
 export default function useAutoSaveResume(resumeData: ResumeValues) {
@@ -66,10 +64,10 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
       }
     }
 
-    console.log(
-      "debouncedResumeData",
-      JSON.stringify(debouncedResumeData, fileReplacer),
-    );
+    // console.log(
+    //   "debouncedResumeData",
+    //   JSON.stringify(debouncedResumeData, fileReplacer),
+    // );
 
     console.log("lastSaveData", JSON.stringify(lastSaveData, fileReplacer));
 
@@ -87,7 +85,6 @@ export default function useAutoSaveResume(resumeData: ResumeValues) {
     isError,
     resumeId,
     searchParams,
-    toast,
   ]);
 
   return {

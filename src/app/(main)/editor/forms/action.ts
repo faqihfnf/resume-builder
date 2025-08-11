@@ -45,8 +45,8 @@ export async function generateSummary(input: GenerateSummaryInput) {
       ${skills}
   `;
 
-  console.log("systemPrompt", systemPrompt);
-  console.log("userPrompt", userPrompt);
+  // console.log("systemPrompt", systemPrompt);
+  // console.log("userPrompt", userPrompt);
 
   try {
     // Generate content using the Gemini AI utility
