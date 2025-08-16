@@ -46,9 +46,12 @@ export default async function Page() {
       <div className="space-y-6">
         {/* Title dan Description */}
         <div className="space-y-2 text-center">
-          <h1 className="text-4xl font-bold tracking-tight">Your Resumes</h1>
+          <h1 className="text-4xl font-bold tracking-tight">
+            Create Your Resume Now
+          </h1>
           <p className="text-lg text-muted-foreground">
-            Manage and create professional resumes
+            Manage and create your professional resumes with ease and
+            efficiency.
           </p>
         </div>
 
@@ -60,23 +63,23 @@ export default async function Page() {
                 <div className="rounded-lg bg-primary/10 p-2">
                   <FileText className="size-5 text-primary" />
                 </div>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">
-                    Total Resumes
-                  </p>
-                  <p className="text-2xl font-bold">{totalCount}</p>
+                <div className="flex flex-col gap-1">
+                  <div className="flex flex-row items-center gap-2">
+                    <p className="text-sm font-semibold">Total Resumes :</p>
+                    <p className="text-xl font-semibold">{totalCount}</p>
+                  </div>
+                  {canCreateNewResume && (
+                    <p className="-mt-2 text-xs text-muted-foreground">
+                      {remainingResumes} Slot{remainingResumes !== 1 ? "s" : ""}{" "}
+                      Remaining
+                    </p>
+                  )}
                 </div>
               </div>
               <div className="text-right">
                 <Badge variant={canCreateNewResume ? "default" : "secondary"}>
                   {totalCount}/4
                 </Badge>
-                {canCreateNewResume && (
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    {remainingResumes} Slot{remainingResumes !== 1 ? "s" : ""}{" "}
-                    Remaining
-                  </p>
-                )}
               </div>
             </div>
           </CardContent>
@@ -97,13 +100,19 @@ export default async function Page() {
             </Button>
           ) : (
             <div className="space-y-2 text-center">
-              <Button disabled size="lg" className="gap-2">
-                <PlusSquare className="size-5" />
+              <Button
+                disabled
+                size="lg"
+                className="text-md bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 font-semibold text-white shadow-lg shadow-fuchsia-200 transition-all duration-300 hover:bg-gradient-to-l hover:shadow-fuchsia-300 sm:w-auto"
+              >
+                <PlusCircle className="size-5" />
                 Create Resume
               </Button>
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground text-red-500">
                 <Info className="size-4" />
-                <span>You've reached the maximum of 4 resumes</span>
+                <span className="">
+                  You've reached the maximum of 4 resumes!
+                </span>
               </div>
             </div>
           )}
@@ -115,7 +124,7 @@ export default async function Page() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold">Recent Resumes</h2>
-            <Badge variant="outline" className="gap-1">
+            <Badge variant="outline" className="gap-1 p-2">
               <FileText className="size-3" />
               {totalCount} resume{totalCount !== 1 ? "s" : ""}
             </Badge>
