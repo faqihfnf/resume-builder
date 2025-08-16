@@ -1,6 +1,6 @@
 "use client";
 
-import ResumePreview from "@/components/ResumePreview";
+import ResumePreview from "@/components/sections/ResumePreview";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -24,7 +24,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import LoadingButton from "@/components/LoadingButton";
+import LoadingButton from "@/components/sections/LoadingButton";
 import { useReactToPrint } from "react-to-print";
 
 interface ResumeItemProps {

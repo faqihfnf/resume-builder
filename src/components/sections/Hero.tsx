@@ -5,6 +5,7 @@ import {
   Sparkles,
   FileText,
   Zap,
+  MessageSquareShare,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -129,12 +130,12 @@ function Hero() {
               rel="noopener noreferrer"
               className="group inline-flex w-full items-center justify-center gap-3 rounded-2xl border-2 border-slate-200 bg-white/80 px-8 py-4 text-lg font-bold text-slate-700 shadow-xl backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-blue-300 hover:shadow-2xl active:scale-95 sm:w-auto"
             >
-              <Video
+              <MessageSquareShare
                 size={24}
                 className="text-blue-600 transition-colors duration-200 group-hover:text-purple-600"
               />
               <span className="transition-colors duration-200 group-hover:text-blue-600">
-                Watch Demo
+                Feedback
               </span>
             </Link>
           </div>

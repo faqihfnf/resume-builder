@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "next-themes";
@@ -7,11 +7,13 @@ import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
 export const metadata: Metadata = {
-  title: {
-    template: "%s |Ai Resume Builder",
-    absolute: "Ai Resume Builder",
-  },
+  title: "Resumify",
   description: "AI Resume builder for job seekers",
 };
 
@@ -23,7 +25,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={inter.className}>
+        <body className={`${poppins.className} ${inter.className} antialiased`}>
           <ThemeProvider
             attribute={"class"}
             defaultTheme={"system"}

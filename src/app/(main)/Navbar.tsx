@@ -1,5 +1,5 @@
 "use client";
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/sections/ThemeToggle";
 import { UserButton } from "@clerk/nextjs";
 import { CreditCardIcon } from "lucide-react";
 import Image from "next/image";
@@ -11,19 +11,15 @@ export default function Navbar() {
   const { theme } = useTheme();
   return (
     <header className="shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 p-3">
-        <Link href="/resumes" className="flex items-center gap-2">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={35}
-            height={35}
-            className="rounded-full"
-          />
-          <span className="text-xl font-bold tracking-tight">
-            Resume Builder
-          </span>
-        </Link>
+      <div className="mx-auto ml-1 flex items-center justify-between p-1">
+        <div className="flex items-center">
+          <Link href="/">
+            <Image src={"/logo.png"} alt="logo" width={60} height={60} />
+          </Link>
+          <h1 className="-ml-3 bg-gradient-to-r from-purple-500 via-sky-500 to-emerald-500 bg-clip-text text-2xl font-extrabold text-transparent sm:text-3xl">
+            Resumify.
+          </h1>
+        </div>
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <UserButton

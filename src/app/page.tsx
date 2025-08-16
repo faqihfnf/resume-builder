@@ -1,8 +1,8 @@
-import Faq from "@/components/Faq";
-import FooterLandingPage from "@/components/FooterLandingPage";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import PlusPoint from "@/components/PlusPoint";
+import Faq from "@/components/sections/Faq";
+import FooterLandingPage from "@/components/sections/FooterLandingPage";
+import Header from "@/components/sections/Header";
+import Hero from "@/components/sections/Hero";
+import PlusPoint from "@/components/sections/PlusPoint";
 
 export default function Home() {
   return (

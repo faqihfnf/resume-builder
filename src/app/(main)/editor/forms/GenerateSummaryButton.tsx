@@ -1,4 +1,4 @@
-import LoadingButton from "@/components/LoadingButton";
+import LoadingButton from "@/components/sections/LoadingButton";
 import { ResumeValues } from "@/lib/validation";
 import { WandSparklesIcon } from "lucide-react";
 import { useState } from "react";
