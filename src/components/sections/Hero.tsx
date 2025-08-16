@@ -1,7 +1,6 @@
 "use client";
 import {
   SquareArrowOutUpRight,
-  Video,
   Sparkles,
   FileText,
   Zap,

@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import prisma from "@/lib/prisma";
 import { resumeDataInclude } from "@/lib/type";
 import { auth } from "@clerk/nextjs/server";
-import { PlusSquare, FileText, Info, PlusCircle } from "lucide-react";
+import { FileText, Info, PlusCircle } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import ResumeItem from "./ResumeItem";
