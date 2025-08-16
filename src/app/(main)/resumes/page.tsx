@@ -1,14 +1,16 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import prisma from "@/lib/prisma";
 import { resumeDataInclude } from "@/lib/type";
 import { auth } from "@clerk/nextjs/server";
-import { PlusSquare } from "lucide-react";
+import { PlusSquare, FileText, Info, PlusCircle } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import ResumeItem from "./ResumeItem";
 
 export const metadata: Metadata = {
-  title: "Your Resumes",
+  title: "Resumify || Your Resumes",
 };
 
 export default async function Page() {
@@ -35,27 +37,110 @@ export default async function Page() {
     }),
   ]);
 
-  const canCreateNewResume = totalCount < 3;
+  const canCreateNewResume = totalCount < 4;
+  const remainingResumes = 4 - totalCount;
 
   return (
-    <main className="mx-auto w-full max-w-7xl space-y-6 px-3 py-6">
-      {canCreateNewResume && (
-        <Button asChild className="mx-auto flex w-fit gap-2">
-          <Link href="/editor">
-            <PlusSquare className="size-5" />
-            New Resume
-          </Link>
-        </Button>
+    <main className="mx-auto w-full max-w-7xl space-y-8 px-3 py-6">
+      {/* Header Section dengan Stats dan Actions */}
+      <div className="space-y-6">
+        {/* Title dan Description */}
+        <div className="space-y-2 text-center">
+          <h1 className="text-4xl font-bold tracking-tight">Your Resumes</h1>
+          <p className="text-lg text-muted-foreground">
+            Manage and create professional resumes
+          </p>
+        </div>
+
+        {/* Stats Card */}
+        <Card className="mx-auto max-w-md">
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="rounded-lg bg-primary/10 p-2">
+                  <FileText className="size-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-muted-foreground">
+                    Total Resumes
+                  </p>
+                  <p className="text-2xl font-bold">{totalCount}</p>
+                </div>
+              </div>
+              <div className="text-right">
+                <Badge variant={canCreateNewResume ? "default" : "secondary"}>
+                  {totalCount}/4
+                </Badge>
+                {canCreateNewResume && (
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    {remainingResumes} Slot{remainingResumes !== 1 ? "s" : ""}{" "}
+                    Remaining
+                  </p>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col items-center gap-4">
+          {canCreateNewResume ? (
+            <Button
+              asChild
+              size="lg"
+              className="text-md bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 font-semibold text-white shadow-lg shadow-fuchsia-200 transition-all duration-300 hover:bg-gradient-to-l hover:shadow-fuchsia-300 sm:w-auto"
+            >
+              <Link href="/editor">
+                <PlusCircle className="size-5" />
+                Create Resume
+              </Link>
+            </Button>
+          ) : (
+            <div className="space-y-2 text-center">
+              <Button disabled size="lg" className="gap-2">
+                <PlusSquare className="size-5" />
+                Create Resume
+              </Button>
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Info className="size-4" />
+                <span>You've reached the maximum of 4 resumes</span>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Resume Grid */}
+      {totalCount > 0 ? (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold">Recent Resumes</h2>
+            <Badge variant="outline" className="gap-1">
+              <FileText className="size-3" />
+              {totalCount} resume{totalCount !== 1 ? "s" : ""}
+            </Badge>
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {resumes.map((resume) => (
+              <ResumeItem key={resume.id} resume={resume} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <Card className="mx-auto max-w-md">
+          <CardContent className="space-y-4 p-8 text-center">
+            <div className="mx-auto w-fit rounded-full bg-muted p-4">
+              <FileText className="size-8 text-muted-foreground" />
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold">No resumes yet</h3>
+              <p className="text-sm text-muted-foreground">
+                Create your first professional resume to get started
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       )}
-      <div className="space-y-1">
-        <h1 className="text-3xl font-bold">Your Resume</h1>
-        <p className="font-semibold">Total Resume : {totalCount}</p>
-      </div>
-      <div className="flex w-full grid-cols-2 flex-col gap-3 sm:grid md:grid-cols-3 lg:grid-cols-4">
-        {resumes.map((resume) => (
-          <ResumeItem key={resume.id} resume={resume} />
-        ))}
-      </div>
     </main>
   );
 }
