@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Resumify",
+  title: "Resumefly",
   description: "AI Resume builder for job seekers",
 };
 

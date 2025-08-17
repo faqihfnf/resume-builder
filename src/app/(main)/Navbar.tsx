@@ -12,14 +12,12 @@ export default function Navbar() {
   return (
     <header className="shadow-sm">
       <div className="mx-auto ml-1 flex items-center justify-between p-1">
-        <div className="flex items-center">
-          <Link href="/">
-            <Image src={"/logo.png"} alt="logo" width={60} height={60} />
-          </Link>
+        <Link href="/" className="flex items-center">
+          <Image src={"/logo.png"} alt="logo" width={60} height={60} />
           <h1 className="-ml-3 bg-gradient-to-r from-purple-500 via-sky-500 to-emerald-500 bg-clip-text text-2xl font-extrabold text-transparent sm:text-3xl">
-            Resumify.
+            Resumefly.
           </h1>
-        </div>
+        </Link>
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <UserButton

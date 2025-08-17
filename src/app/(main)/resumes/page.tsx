@@ -10,7 +10,7 @@ import Link from "next/link";
 import ResumeItem from "./ResumeItem";
 
 export const metadata: Metadata = {
-  title: "Resumify || Your Resumes",
+  title: "Resumefly | Your Resumes",
 };
 
 export default async function Page() {
@@ -37,8 +37,8 @@ export default async function Page() {
     }),
   ]);
 
-  const canCreateNewResume = totalCount < 4;
-  const remainingResumes = 4 - totalCount;
+  const canCreateNewResume = totalCount < 3;
+  const remainingResumes = 3 - totalCount;
 
   return (
     <main className="mx-auto w-full max-w-7xl space-y-8 px-3 py-6">
@@ -78,7 +78,7 @@ export default async function Page() {
               </div>
               <div className="text-right">
                 <Badge variant={canCreateNewResume ? "default" : "secondary"}>
-                  {totalCount}/4
+                  {totalCount}/3
                 </Badge>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default async function Page() {
               <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground text-red-500">
                 <Info className="size-4" />
                 <span className="">
-                  You've reached the maximum of 4 resumes!
+                  You've reached the maximum of 3 resumes!
                 </span>
               </div>
             </div>
@@ -129,7 +129,7 @@ export default async function Page() {
               {totalCount} resume{totalCount !== 1 ? "s" : ""}
             </Badge>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
             {resumes.map((resume) => (
               <ResumeItem key={resume.id} resume={resume} />
             ))}
