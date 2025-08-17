@@ -30,10 +30,10 @@ function PlusPoint() {
       <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         {/* Header Section */}
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          {/* <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-6 py-2 text-sm font-medium text-blue-700 shadow-lg backdrop-blur-sm">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-6 py-2 text-sm font-medium text-blue-700 shadow-lg backdrop-blur-sm">
             <Sparkles size={16} className="text-blue-500" />
             Why Choose Our AI Resume Builder
-          </div> */}
+          </div>
 
           <h2 className="mb-6 text-3xl font-black sm:text-4xl lg:text-5xl">
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 bg-clip-text text-transparent">
@@ -64,7 +64,7 @@ function PlusPoint() {
                   <Brain className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">
-                  AI Content Generation
+                  AI Summarize
                 </h3>
               </div>
               <p className="leading-relaxed text-slate-600">
@@ -90,7 +90,7 @@ function PlusPoint() {
                   <FileText className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">
-                  Smart Template Selection
+                  Smart Template
                 </h3>
               </div>
               <p className="leading-relaxed text-slate-600">
@@ -142,7 +142,7 @@ function PlusPoint() {
                   <Zap className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">
-                  Real-time AI Suggestions
+                  Simple Usage
                 </h3>
               </div>
               <p className="leading-relaxed text-slate-600">
@@ -168,13 +168,13 @@ function PlusPoint() {
                   <Download className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">
-                  Multiple Export Formats
+                  Export Formats
                 </h3>
               </div>
               <p className="leading-relaxed text-slate-600">
-                Download your resume in various formats including PDF, Word, and
-                plain text. Each format is optimized for different application
-                methods and ATS requirements.
+                We make it easy for you to download your resume in PDF format.
+                and you can also print it easily if you want with a good
+                appearance.
               </p>
             </div>
           </div>

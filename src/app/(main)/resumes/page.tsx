@@ -56,7 +56,7 @@ export default async function Page() {
         </div>
 
         {/* Stats Card */}
-        <Card className="mx-auto max-w-md">
+        <Card className="mx-auto max-w-md shadow-md shadow-indigo-400 transition-all duration-300 hover:bg-gradient-to-l">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -109,9 +109,9 @@ export default async function Page() {
                 Create Resume
               </Button>
               <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground text-red-500">
-                <Info className="size-4" />
-                <span className="">
-                  You've reached the maximum of 3 resumes!
+                <Info className="mt-2 size-4" />
+                <span className="mt-2">
+                  You have reached the maximum of 3 resumes !!!
                 </span>
               </div>
             </div>

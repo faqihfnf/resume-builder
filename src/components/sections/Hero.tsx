@@ -47,11 +47,11 @@ function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 lg:py-12">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-2">
         <div className="space-y-8 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-6 py-2 text-sm font-medium text-indigo-700 shadow-lg backdrop-blur-sm">
-            <Sparkles size={16} className="text-indigo-500" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-indigo-100 px-3 py-2 text-xs font-medium text-indigo-700 shadow-lg backdrop-blur-sm">
+            <Sparkles size={16} className="text-indigo-700" />
             AI-Powered Resume Builder
           </div>
 
@@ -88,7 +88,7 @@ function Hero() {
           {/* Description */}
           <div className="mx-auto max-w-4xl">
             <p className="text-lg font-medium leading-relaxed text-slate-600 sm:text-xl">
-              Transform your career with our intelligent resume builder.
+              Start transform your career with our intelligent resume builder.
               <span className="font-semibold text-blue-600">
                 {" "}
                 AI-powered suggestions
