@@ -3,6 +3,8 @@ import { FaFacebookF, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
+import Link from "next/link";
+import Image from "next/image";
 
 function FooterLandingPage() {
   return (
@@ -10,13 +12,23 @@ function FooterLandingPage() {
       <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-12">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <div className="flex justify-center bg-gradient-to-l from-sky-600 via-purple-600 to-pink-600 bg-clip-text text-3xl font-extrabold text-transparent sm:justify-start sm:text-4xl">
-              {" "}
-              Wawancarai.
+            <div className="flex items-start">
+              <Link href="/" className="flex items-center">
+                <Image
+                  src={"/logo.png"}
+                  alt="logo"
+                  width={60}
+                  height={60}
+                  className="-ml-3"
+                />
+                <h1 className="-ml-3 bg-gradient-to-r from-purple-500 via-sky-500 to-emerald-500 bg-clip-text text-2xl font-extrabold text-transparent sm:text-3xl">
+                  Resumefly.
+                </h1>
+              </Link>
             </div>
             <p className="mt-6 max-w-md text-center leading-relaxed text-white sm:max-w-xs sm:text-left">
-              Wawancarai is an AI-powered mockup interview tool that helps you
-              create and start a new mockup interview with ease.
+              Resumefly is a simple and easy way to create a resume. You can
+              build resume effortlessly.
             </p>
             {/* Social links Start */}
             <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
@@ -75,36 +87,37 @@ function FooterLandingPage() {
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
-                  <a
-                    className="text-white/70 transition hover:text-indigo-600"
-                    href="/wawancara"
+                  <Link
+                    className="relative text-white/70 transition hover:text-indigo-600"
+                    href="/"
                   >
-                    Mock Interview
-                  </a>
+                    <span>Mock Interview</span>
+                    <span className="absolute top-[-6px] ml-1 text-xs font-bold text-yellow-400">
+                      soon
+                    </span>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="relative text-white/70 transition hover:text-indigo-600"
-                    href="/cv-review"
+                    href="https://resumeaizer.my.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span>CV Review</span>
-                    <span className="absolute top-[-6px] ml-1 text-xs font-bold text-yellow-400">
-                      soon
-                    </span>
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="relative text-white/70 transition hover:text-indigo-600"
-                    href="/cv-maker"
+                    href="/resumes"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span>CV Maker</span>
-                    <span className="absolute top-[-6px] ml-1 text-xs font-bold text-yellow-400">
-                      soon
-                    </span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

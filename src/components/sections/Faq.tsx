@@ -39,10 +39,9 @@ function Faq() {
             Bagaimana cara kerja platform ini?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
-            Platform ini menggunakan AI untuk menghasilkan pertanyaan wawancara,
-            mengevaluasi jawaban anda, dan memberikan umpan balik serta rating
-            untuk membantu Anda mempersiapkan diri sebelum menghadapi wawancara
-            kerja sesungguhnya.
+            Platform ini dibuat untuk membantu anda membuat resume yang menarik
+            dan profesional. Dilengkapi dengan AI untuk memberikan summary
+            singkat tentang diri anda.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem
@@ -54,8 +53,7 @@ function Faq() {
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
             Ya, platform ini dirancang untuk semua pencari kerja, dari fresh
-            graduate hingga profesional berpengalaman. Pertanyaan dan umpan
-            balik akan disesuaikan dengan level dan pengalaman kerja pengguna.
+            graduate hingga profesional berpengalaman.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem
@@ -63,12 +61,10 @@ function Faq() {
           className="mb-2 rounded-lg bg-slate-50/20 px-4"
         >
           <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
-            Apakah bisa memilih posisi pekerjaan tertentu untuk latihan?
+            Apakah ada batasan jumlah resume yang dapat dibuat?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
-            Tentu! Anda bisa memilih jenis pekerjaan atau industri yang ingin
-            Anda latih, dan AI akan menyesuaikan pertanyaan yang relevan dengan
-            bidang tersebut.
+            Ya! Untuk saat ini anda dapat membuat maksimal 3 resume.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem
@@ -76,26 +72,11 @@ function Faq() {
           className="mb-2 rounded-lg bg-slate-50/20 px-4"
         >
           <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
-            Apakah hasil dan umpan balik akan disimpan?
+            Apakah resume akan disimpan?
           </AccordionTrigger>
           <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
-            Ya! Semua hasil dan umpan balik akan disimpan dan dapat diakses
-            kapan saja dengan mudah agar anda bisa melihat kembali hasil
-            interview anda.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem
-          value="item-6"
-          className="mb-2 rounded-lg bg-slate-50/20 px-4"
-        >
-          <AccordionTrigger className="text-md text-left md:text-lg lg:text-xl">
-            Apakah video wawancara akan disimpan?
-          </AccordionTrigger>
-          <AccordionContent className="text-sm font-semibold text-indigo-800 md:text-lg">
-            Tidak perlu khawatir! Platform tidak merekam video anda sama sekali.
-            Fitur opencam hanya digunakan untuk simulasi agar wawancara menjadi
-            lebih nyata. Anda bisa berlatih menjawab pertanyaan wawancara dengan
-            menggunakan fitur opencam
+            Ya! Resume yang anda buat akan disimpan. Dan anda dapat mencetak
+            atau mengunduhnya dengan mudah.
           </AccordionContent>
         </AccordionItem>
       </Accordion>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <header className="fixed left-0 right-0 top-0 z-50">
+    <header className="left-0 right-0 top-0 z-50">
       <div className="mx-auto mt-0.5 flex h-16 gap-8 p-2 sm:justify-between">
         <Link href="/" className="flex items-center">
           <Image src={"/logo.png"} alt="logo" width={60} height={60} />
