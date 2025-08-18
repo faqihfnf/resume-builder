@@ -33,29 +33,29 @@ function FooterLandingPage() {
             {/* Social links Start */}
             <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="https://www.facebook.com/faqihnurfahmi"
                   rel="noreferrer"
                   target="_blank"
                   className="text-white transition hover:text-indigo-600"
                 >
                   <span className="sr-only">Facebook</span>
                   <FaFacebookF className="size-6" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="https://www.instagram.com/faqih.fnf"
                   rel="noreferrer"
                   target="_blank"
                   className="text-white transition hover:text-indigo-600"
                 >
                   <span className="sr-only">Instagram</span>
                   <FaInstagram className="size-6" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://github.com/faqihfnf"
                   rel="noreferrer"
                   target="_blank"
@@ -63,11 +63,11 @@ function FooterLandingPage() {
                 >
                   <span className="sr-only">GitHub</span>
                   <FaGithub className="size-6" />
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
+                <Link
                   href="https://www.linkedin.com/in/faqih-nur-fahmi-b51bb1ab/"
                   rel="noreferrer"
                   target="_blank"
@@ -75,7 +75,7 @@ function FooterLandingPage() {
                 >
                   <span className="sr-only">LinkedIn</span>
                   <FaLinkedin className="size-6" />
-                </a>
+                </Link>
               </li>
             </ul>
             {/* Social links End */}
