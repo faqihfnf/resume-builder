@@ -27,7 +27,6 @@ function Hero() {
         {/* Blue gradient */}
         <div className="absolute right-0 mt-48 h-1/6 w-[60%] bg-gradient-to-tr from-cyan-200 via-sky-200 to-green-200 blur-[110px]"></div>
         {/* Grid pattern overlay */}
-        {/* <div className="bg-grid-slate-100 absolute inset-0 opacity-20 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div> */}
       </div>
 
       {/* Floating elements */}
@@ -80,9 +79,6 @@ function Hero() {
                 </span>
               </span>
             </h2>
-            {/* <h3 className="text-xl font-semibold text-slate-600 sm:text-2xl">
-              Resumes with AI Intelligence
-            </h3> */}
           </div>
 
           {/* Description */}
