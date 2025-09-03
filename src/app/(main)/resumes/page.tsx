@@ -53,6 +53,17 @@ export default async function Page() {
             Manage and create your professional resumes with ease and
             efficiency.
           </p>
+          <p className="text-lg text-foreground">
+            Before applying for a job, analyze your resume{" "}
+            <Link
+              href="https://www.resumeaizer.my.id/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary hover:underline"
+            >
+              Here!
+            </Link>
+          </p>
         </div>
 
         {/* Stats Card */}
